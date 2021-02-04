@@ -2,7 +2,7 @@ let apiLink = "http://api.openweathermap.org/data/2.5/weather";
 let apiKey = 'd615e9df6db970486f02a6c42431f0d8';
 
 
-let link = function (city) {
+let link =  city => {
    
     let url = `${apiLink}?q=${city}&units=metric&appid=${apiKey}`;
 
@@ -27,13 +27,11 @@ let link = function (city) {
 
 
 
-function ClickSearch() {
+ let ClickSearch = ()  => {
 
     const citySearch = document.getElementById("Search-city").value;
     
     document.getElementById(" header-text ").style.display = "none";
     link(citySearch);
-    
-
     
 }

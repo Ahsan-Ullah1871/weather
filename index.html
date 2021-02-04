@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        .header-text{
+            color: bisque;
+             text-align: center;
+         }
+        .table{
+            width: 50%;
+            
+        }
+        .weather-status{
+            display:none;
+        }
+        .headline{
+            color: tomato;
+            font-size: 20px;
+            font-weight:bold;
+         
+        }
+
+        .table{
+            margin: 0 auto;
+        }
+        #weatherIcon{
+            position: relative;
+            width: 70px;
+            margin: 0 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="Search-city" type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button onclick=" ClickSearch() " id="search" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <h2  id=" header-text " class=" header-text ">Search and see the weather in  your city </h2>
+        <img id="weatherIcon" src="images/download.svg" alt="">
+        <div class=" weather-status text-white text-center" id="weather-status">
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <h1 id="cityName"></h1>
+            
+            <table class="table text-start ">
+            
+               
+                    <tr class="table-light">
+                        <td  class="headline">Temp:</td>
+                        <td>
+                            <h3><span id="temp"></span>&deg;C</h3>
+                        </td>
+                    </tr>
+                    <tr class="table-dark">
+                        <td class="headline">Clouds:</td>
+                        <td>
+                            <h4><span id="clouds"></span>%</h4>
+                        </td>
+                    </tr>
+                    <tr class="table-light">
+                        <td class="headline">Wind:</td>
+                        <td>
+                            <h4><span id="wind"></span>m/s</h4>
+                        </td>
+                    </tr>
+                    <tr class="table-dark">
+                        <td class="headline">Weather:</td>
+                        <td>
+                            <h4><span id="weather"></span></h4>
+                        </td>
+                    </tr>
+                
+            </table>
+
+        </div>
+
+       
+    </div>
+
+
+
+    <script src="weather.js"></script>
+
+</body>
+
+</html>

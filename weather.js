@@ -21,8 +21,7 @@ let link = function (city) {
 			data.weather[0].description;
 
    
-			console.log(data);
-		});
+ 		});
      
 }
 
